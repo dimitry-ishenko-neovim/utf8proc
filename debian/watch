@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/utf8proc-$1\.tar\.gz/ \
+https://github.com/JuliaLang/utf8proc/tags .*/v?(\d\S*)\.tar\.gz
