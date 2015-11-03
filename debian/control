@@ -2,8 +2,7 @@ Source: utf8proc
 Priority: optional
 Maintainer: Debian Julia Team <pkg-julia-devel@lists.alioth.debian.org>
 Uploaders: Peter Colberg <peter@colberg.org>, Graham Inggs <ginggs@debian.org>
-Build-Depends: debhelper (>= 9), unicode-data (>= 8.0), ttf-unifont (>= 8.0.01),
- fontforge, perl, ruby, julia [amd64 i386]
+Build-Depends: debhelper (>= 9), unicode-data (>= 8.0), perl
 Standards-Version: 3.9.6
 Section: libs
 Homepage: http://julialang.org/utf8proc/

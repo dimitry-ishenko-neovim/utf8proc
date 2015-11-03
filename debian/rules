@@ -2,17 +2,6 @@
 %:
 	dh $@
 
-override_dh_auto_build:
-	dh_auto_build
-ifneq (,$(filter $(DEB_HOST_ARCH),amd64 i386))
-	# For architectures that provide a julia package, reproduce the
-	# complete build process, by generating `utf8proc_data.c` from
-	# the Unicode data and GNU Unifont, and comparing with the one
-	# shipped by upstream.
-	dh_auto_build -- data
-	diff data/utf8proc_data.c.new utf8proc_data.c
-endif
-
 override_dh_auto_install:
 	dh_auto_install -- prefix=/usr libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
