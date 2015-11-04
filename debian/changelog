@@ -1,4 +1,4 @@
-utf8proc (1.3.1-1) UNRELEASED; urgency=medium
+utf8proc (1.3.1-1) unstable; urgency=medium
 
   * Initial release. (Closes: #803681)
 
