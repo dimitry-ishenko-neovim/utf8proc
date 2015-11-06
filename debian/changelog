@@ -1,3 +1,9 @@
+utf8proc (1.3.1-2) UNRELEASED; urgency=medium
+
+  * Relax build-depends version for unicode-data.
+
+ -- Peter Colberg <peter@colberg.org>  Fri, 06 Nov 2015 13:26:14 -0500
+
 utf8proc (1.3.1-1) unstable; urgency=medium
 
   * Initial release. (Closes: #803681)
