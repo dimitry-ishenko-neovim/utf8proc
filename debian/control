@@ -6,8 +6,8 @@ Build-Depends: debhelper (>= 9), unicode-data (>= 6.1.0), perl
 Standards-Version: 3.9.6
 Section: libs
 Homepage: http://julialang.org/utf8proc/
-Vcs-Git: git://anonscm.debian.org/pkg-julia/utf8proc.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-julia/utf8proc.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-julia/utf8proc.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-julia/utf8proc.git
 
 Package: libutf8proc2
 Architecture: any
