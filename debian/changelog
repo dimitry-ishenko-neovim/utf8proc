@@ -1,3 +1,16 @@
+utf8proc (2.0.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release (Closes: #829236)
+  * Refresh patch
+  * Bump SONAME to libutf8proc2
+  * Update debian/libutf8proc2.symbols
+  * Update Vcs-* fields to use https
+  * Enable bindnow hardening flag
+  * Bump Standards-Version to 3.9.8
+  * Add debian/gbp.conf for pristine-tar
+
+ -- Peter Colberg <peter@colberg.org>  Sat, 16 Jul 2016 17:15:58 -0400
+
 utf8proc (1.3.1-2) unstable; urgency=medium
 
   * Relax build-depends version for unicode-data.
