@@ -3,7 +3,7 @@ Priority: optional
 Maintainer: Debian Julia Team <pkg-julia-devel@lists.alioth.debian.org>
 Uploaders: Peter Colberg <peter@colberg.org>, Graham Inggs <ginggs@debian.org>
 Build-Depends: debhelper (>= 9), unicode-data (>= 6.1.0), perl
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Section: libs
 Homepage: http://julialang.org/utf8proc/
 Vcs-Git: https://anonscm.debian.org/git/pkg-julia/utf8proc.git
