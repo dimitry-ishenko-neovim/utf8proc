@@ -1,5 +1,23 @@
 # utf8proc release history #
 
+## Version 2.0 ##
+
+2016-07-13:
+
+- Updated for Unicode 9.0 ([#70]).
+
+- New `utf8proc_grapheme_break_stateful` to handle the complicated
+  grapheme-breaking rules in Unicode 9.  The old `utf8proc_grapheme_break`
+  is still provided, but may incorrectly identify grapheme breaks
+  in some Unicode-9 sequences.
+
+- Smaller Unicode tables ([#62], [#68]).  This required changes
+  in the `utf8proc_property_t` structure, which breaks backward
+  compatibility if you access this `struct` directly.  The
+  functions in the API remain backward-compatible, however.
+
+- Buffer overrun fix ([#66]).
+
 ## Version 1.3.1 ##
 
 2015-11-02:
@@ -232,3 +250,7 @@ Release of version 1.0.1
 [#51]: https://github.com/JuliaLang/utf8proc/issues/51
 [#55]: https://github.com/JuliaLang/utf8proc/issues/55
 [#58]: https://github.com/JuliaLang/utf8proc/issues/58
+[#62]: https://github.com/JuliaLang/utf8proc/issues/62
+[#66]: https://github.com/JuliaLang/utf8proc/issues/66
+[#68]: https://github.com/JuliaLang/utf8proc/issues/68
+[#70]: https://github.com/JuliaLang/utf8proc/issues/70
