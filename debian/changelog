@@ -8,6 +8,7 @@ utf8proc (2.0.1-1) UNRELEASED; urgency=medium
   * Enable bindnow hardening flag
   * Bump Standards-Version to 3.9.8
   * Add debian/gbp.conf for pristine-tar
+  * Build depend on unicode-data >= 9.0 and << 9.1 for tests
 
  -- Peter Colberg <peter@colberg.org>  Sat, 16 Jul 2016 17:15:58 -0400
 
