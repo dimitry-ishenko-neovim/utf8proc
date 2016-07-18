@@ -1,4 +1,4 @@
-utf8proc (2.0.1-1) UNRELEASED; urgency=medium
+utf8proc (2.0.1-1) unstable; urgency=medium
 
   * New upstream release (Closes: #829236)
   * Refresh patch
