@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 10),
                perl,
                unicode-data (<< 10.1),
                unicode-data (>= 10.0)
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Section: libs
 Homepage: http://julialang.org/utf8proc/
 Vcs-Git: https://anonscm.debian.org/git/pkg-julia/utf8proc.git
