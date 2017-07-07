@@ -1,6 +1,7 @@
 utf8proc (2.1.0-1) UNRELEASED; urgency=medium
 
   * New upstream release
+  * Switch to unicode-data 10
 
  -- Graham Inggs <ginggs@debian.org>  Fri, 07 Jul 2017 17:18:34 +0200
 
