@@ -4,6 +4,7 @@ utf8proc (2.1.0-1) UNRELEASED; urgency=medium
   * Switch to unicode-data 10
   * Regenerate utf8proc_data.c from unicode-data 10 
   * Update debian/libutf8proc2.symbols
+  * Switch to debhelper 10
 
  -- Graham Inggs <ginggs@debian.org>  Fri, 07 Jul 2017 17:18:34 +0200
 
