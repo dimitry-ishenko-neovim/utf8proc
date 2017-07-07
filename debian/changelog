@@ -1,7 +1,7 @@
 utf8proc (2.1.0-1) UNRELEASED; urgency=medium
 
   * New upstream release
-  * Switch to unicode-data 10
+  * Switch to unicode-data 10 (Closes: #867105)
   * Regenerate utf8proc_data.c from unicode-data 10 
   * Update debian/libutf8proc2.symbols
   * Switch to debhelper 10
