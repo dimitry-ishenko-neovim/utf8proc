@@ -7,6 +7,7 @@ utf8proc (2.1.0-1) UNRELEASED; urgency=medium
   * Switch to debhelper 10
   * Enable all hardening flags
   * Bump Standards-Version to 4.0.0
+  * Update copyright, use https
 
  -- Graham Inggs <ginggs@debian.org>  Fri, 07 Jul 2017 17:18:34 +0200
 

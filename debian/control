@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 10),
                unicode-data (>= 10.0)
 Standards-Version: 4.0.0
 Section: libs
-Homepage: http://julialang.org/utf8proc/
+Homepage: https://julialang.org/utf8proc/
 Vcs-Git: https://anonscm.debian.org/git/pkg-julia/utf8proc.git
 Vcs-Browser: https://anonscm.debian.org/git/pkg-julia/utf8proc.git
 
