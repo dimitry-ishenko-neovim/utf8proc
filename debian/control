@@ -9,8 +9,8 @@ Build-Depends: debhelper (>= 10),
 Standards-Version: 4.0.0
 Section: libs
 Homepage: https://julialang.org/utf8proc/
-Vcs-Git: https://anonscm.debian.org/git/pkg-julia/utf8proc.git
-Vcs-Browser: https://anonscm.debian.org/git/pkg-julia/utf8proc.git
+Vcs-Git: https://salsa.debian.org/julia-team/utf8proc.git
+Vcs-Browser: https://salsa.debian.org/julia-team/utf8proc
 
 Package: libutf8proc2
 Architecture: any
