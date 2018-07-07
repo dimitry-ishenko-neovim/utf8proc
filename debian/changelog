@@ -10,6 +10,7 @@ utf8proc (2.1.1-1) UNRELEASED; urgency=medium
   * Drop symbols of generated const tables, see upstream PR #100
   * Add Mo Zhou to uploaders
   * Switch to debhelper 11
+  * Trim trailing whitespace from debian/changelog
 
  -- Graham Inggs <ginggs@debian.org>  Sat, 07 Jul 2018 08:30:46 +0000
 
@@ -17,7 +18,7 @@ utf8proc (2.1.0-1) unstable; urgency=medium
 
   * New upstream release
   * Switch to unicode-data 10 (Closes: #867105)
-  * Regenerate utf8proc_data.c from unicode-data 10 
+  * Regenerate utf8proc_data.c from unicode-data 10
   * Update debian/libutf8proc2.symbols
   * Switch to debhelper 10
   * Enable all hardening flags
