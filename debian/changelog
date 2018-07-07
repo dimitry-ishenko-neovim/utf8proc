@@ -12,6 +12,7 @@ utf8proc (2.1.1-1) UNRELEASED; urgency=medium
   * Switch to debhelper 11
   * Trim trailing whitespace from debian/changelog
   * Drop unnecessary get-orig-source target from debian/rules
+  * Bump Standards-Version to 4.1.5
 
  -- Graham Inggs <ginggs@debian.org>  Sat, 07 Jul 2018 08:30:46 +0000
 
