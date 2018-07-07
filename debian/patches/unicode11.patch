@@ -1,3 +1,8 @@
+Description: Regenerate utf8proc_data.c from unicode-data 11
+Forwarded: not-needed
+Author: Graham Inggs <ginggs@debian.org>
+Last-Update: 2018-07-07
+
 --- a/utf8proc_data.c
 +++ b/utf8proc_data.c
 @@ -179,1002 +179,1030 @@
