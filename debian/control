@@ -6,8 +6,8 @@ Uploaders: Peter Colberg <peter@colberg.org>,
            Mo Zhou <cdluminate@gmail.com>,
 Build-Depends: debhelper (>= 11),
                perl,
-               unicode-data (<< 10.1),
-               unicode-data (>= 10.0)
+               unicode-data (<< 11.1),
+               unicode-data (>= 11.0)
 Standards-Version: 4.1.5
 Section: libs
 Homepage: https://github.com/JuliaStrings/utf8proc

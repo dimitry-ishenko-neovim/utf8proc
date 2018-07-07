@@ -3,7 +3,7 @@ Description: Use unicode-data instead of downloading external files
  provided by the packages unicode-data and ttf-unifont, respectively.
 Author: Peter Colberg <peter@colberg.org>
 Forwarded: not-needed
-Last-Update: 2017-07-07
+Last-Update: 2018-07-07
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/data/Makefile
@@ -13,7 +13,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  # GNU Unifont version for font metric calculations:
 -UNIFONT_VERSION=9.0.04
-+UNIFONT_VERSION=10.0.02
++UNIFONT_VERSION=11.0.01
  
  unifont.ttf:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://mirrors.kernel.org/gnu/unifont/unifont-$(UNIFONT_VERSION)/unifont-$(UNIFONT_VERSION).ttf
@@ -30,7 +30,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  # Unicode data version
 -UNICODE_VERSION=9.0.0
-+UNICODE_VERSION=10.0.0
++UNICODE_VERSION=11.0.0
  
  UnicodeData.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ -O http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
