@@ -28,7 +28,7 @@
  * utf8proc is a free/open-source (MIT/expat licensed) C library
  * providing Unicode normalization, case-folding, and other operations
  * for strings in the UTF-8 encoding, supporting Unicode version
- * 8.0.0.  See the utf8proc home page (http://julialang.org/utf8proc/)
+ * 9.0.0.  See the utf8proc home page (http://julialang.org/utf8proc/)
  * for downloads and other information, or the source code on github
  * (https://github.com/JuliaLang/utf8proc).
  *
@@ -73,11 +73,11 @@
 /** The MINOR version number (increased when new functionality is added in a backwards-compatible manner). */
 #define UTF8PROC_VERSION_MINOR 1
 /** The PATCH version (increased for fixes that do not change the API). */
-#define UTF8PROC_VERSION_PATCH 0
+#define UTF8PROC_VERSION_PATCH 1
 /** @} */
 
 #include <stdlib.h>
-#include <sys/types.h>
+
 #if defined(_MSC_VER) && _MSC_VER < 1800
 // MSVC prior to 2013 lacked stdbool.h and inttypes.h
 typedef signed char utf8proc_int8_t;
