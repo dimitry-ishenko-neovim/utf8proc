@@ -284,9 +284,8 @@ static utf8proc_bool grapheme_break_simple(int lbc, int tbc) {
 
 static utf8proc_bool grapheme_break_extended(int lbc, int tbc, utf8proc_int32_t *state)
 {
-  int lbc_override = lbc;
-  if (state && *state != UTF8PROC_BOUNDCLASS_START)
-    lbc_override = *state;
+  int lbc_override = ((state && *state != UTF8PROC_BOUNDCLASS_START)
+                      ? *state : lbc);
   utf8proc_bool break_permitted = grapheme_break_simple(lbc_override, tbc);
   if (state) {
     // Special support for GB 12/13 made possible by GB999. After two RI
@@ -632,9 +631,9 @@ UTF8PROC_DLLEXPORT utf8proc_ssize_t utf8proc_normalize_utf32(utf8proc_int32_t *b
             current_property->comb_index != UINT16_MAX &&
             current_property->comb_index >= 0x8000) {
           int sidx = starter_property->comb_index;
-          int idx = (current_property->comb_index & 0x3FFF) - utf8proc_combinations[sidx];
-          if (idx >= 0 && idx <= utf8proc_combinations[sidx + 1] ) {
-            idx += sidx + 2;
+          int idx = current_property->comb_index & 0x3FFF;
+          if (idx >= utf8proc_combinations[sidx] && idx <= utf8proc_combinations[sidx + 1] ) {
+            idx += sidx + 2 - utf8proc_combinations[sidx];
             if (current_property->comb_index & 0x4000) {
               composition = (utf8proc_combinations[idx] << 16) | utf8proc_combinations[idx+1];
             } else
