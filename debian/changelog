@@ -7,6 +7,7 @@ utf8proc (2.1.1-1) UNRELEASED; urgency=medium
   * New upstream release
   * Update upstream URLs for move to JuliaStrings
   * Refresh patches
+  * Drop symbols of generated const tables, see upstream PR #100
 
  -- Graham Inggs <ginggs@debian.org>  Sat, 07 Jul 2018 08:30:46 +0000
 
