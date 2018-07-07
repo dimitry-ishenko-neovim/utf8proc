@@ -33,7 +33,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +UNICODE_VERSION=10.0.0
  
  UnicodeData.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
+-	$(CURL) $(CURLFLAGS) -o $@ -O http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
 +	cp /usr/share/unicode/UnicodeData.txt $@
  
  EastAsianWidth.txt:
