@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: utf8proc
-Source: https://julialang.org/utf8proc/
+Source: https://github.com/JuliaStrings/utf8proc
 
 Files: *
 Copyright: 2009, 2013 Public Software Group e. V., Berlin, Germany

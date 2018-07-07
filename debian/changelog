@@ -1,3 +1,14 @@
+utf8proc (2.1.1-1) UNRELEASED; urgency=medium
+
+  [ Peter Colberg ]
+  * Update Vcs-* fields for move to salsa.debian.org
+
+  [ Graham Inggs ]
+  * New upstream release
+  * Update upstream URLs for move to JuliaStrings
+
+ -- Graham Inggs <ginggs@debian.org>  Sat, 07 Jul 2018 08:30:46 +0000
+
 utf8proc (2.1.0-1) unstable; urgency=medium
 
   * New upstream release
