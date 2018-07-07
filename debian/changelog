@@ -9,6 +9,7 @@ utf8proc (2.1.1-1) UNRELEASED; urgency=medium
   * Refresh patches
   * Drop symbols of generated const tables, see upstream PR #100
   * Add Mo Zhou to uploaders
+  * Switch to debhelper 11
 
  -- Graham Inggs <ginggs@debian.org>  Sat, 07 Jul 2018 08:30:46 +0000
 
