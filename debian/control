@@ -1,7 +1,9 @@
 Source: utf8proc
 Priority: optional
 Maintainer: Debian Julia Team <pkg-julia-devel@lists.alioth.debian.org>
-Uploaders: Peter Colberg <peter@colberg.org>, Graham Inggs <ginggs@debian.org>
+Uploaders: Peter Colberg <peter@colberg.org>,
+           Graham Inggs <ginggs@debian.org>,
+           Mo Zhou <cdluminate@gmail.com>,
 Build-Depends: debhelper (>= 10),
                perl,
                unicode-data (<< 10.1),
