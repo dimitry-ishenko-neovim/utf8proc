@@ -4,7 +4,7 @@ utf8proc (2.1.1-1) UNRELEASED; urgency=medium
   * Update Vcs-* fields for move to salsa.debian.org
 
   [ Graham Inggs ]
-  * New upstream release
+  * New upstream release (Closes: 902902)
   * Update upstream URLs for move to JuliaStrings
   * Refresh patches
   * Drop symbols of generated const tables, see upstream PR #100
@@ -13,7 +13,7 @@ utf8proc (2.1.1-1) UNRELEASED; urgency=medium
   * Trim trailing whitespace from debian/changelog
   * Drop unnecessary get-orig-source target from debian/rules
   * Bump Standards-Version to 4.1.5
-  * Switch to unicode-data 11
+  * Switch to unicode-data 11 (Closes: #903381)
   * Regenerate utf8proc_data.c from unicode-data 11
   * Skip failing grapheme break tests
 
