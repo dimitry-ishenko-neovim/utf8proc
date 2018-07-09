@@ -1,0 +1,18 @@
+Description: Skip failing grapheme break tests
+Forwarded: not-needed
+Author: Graham Inggs <ginggs@debian.org>
+Last-Update: 2018-07-09
+
+--- a/data/Makefile
++++ b/data/Makefile
+@@ -60,6 +60,10 @@
+ 
+ GraphemeBreakTest.txt:
+ 	$(PERL) -pe 's,÷,/,g;s,×,+,g' < /usr/share/unicode/auxiliary/GraphemeBreakTest.txt > $@
++	sed -i '/^\/ 0061 + 1F3FF \/ 1F476 + 200D + 1F6D1 \//d' $@
++	sed -i '/^\/ 1F476 + 1F3FF + 0308 + 200D + 1F476 + 1F3FF \//d' $@
++	sed -i '/^\/ 1F6D1 + 200D + 1F6D1 \//d' $@
++	sed -i '/^\/ 2701 + 200D + 2701 \//d' $@
+ 
+ clean:
+ 	rm -f UnicodeData.txt EastAsianWidth.txt GraphemeBreakProperty.txt DerivedCoreProperties.txt CompositionExclusions.txt CaseFolding.txt NormalizationTest.txt GraphemeBreakTest.txt CharWidths.txt unifont*.ttf unifont*.sfd
