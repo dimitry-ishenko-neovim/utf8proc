@@ -1,4 +1,4 @@
-utf8proc (2.1.1-1) UNRELEASED; urgency=medium
+utf8proc (2.1.1-1) unstable; urgency=medium
 
   [ Peter Colberg ]
   * Update Vcs-* fields for move to salsa.debian.org
@@ -17,7 +17,7 @@ utf8proc (2.1.1-1) UNRELEASED; urgency=medium
   * Regenerate utf8proc_data.c from unicode-data 11
   * Skip failing grapheme break tests
 
- -- Graham Inggs <ginggs@debian.org>  Sat, 07 Jul 2018 08:30:46 +0000
+ -- Graham Inggs <ginggs@debian.org>  Mon, 09 Jul 2018 13:43:06 +0000
 
 utf8proc (2.1.0-1) unstable; urgency=medium
 
