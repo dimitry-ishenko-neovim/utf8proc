@@ -3,17 +3,13 @@ Description: Use unicode-data instead of downloading external files
  provided by the packages unicode-data and ttf-unifont, respectively.
 Author: Peter Colberg <peter@colberg.org>
 Forwarded: not-needed
-Last-Update: 2018-07-07
+Last-Update: 2018-07-27
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/data/Makefile
 +++ b/data/Makefile
-@@ -20,13 +20,13 @@
- 	$(RUBY) data_generator.rb < UnicodeData.txt > $@
- 
- # GNU Unifont version for font metric calculations:
--UNIFONT_VERSION=9.0.04
-+UNIFONT_VERSION=11.0.01
+@@ -23,10 +23,10 @@
+ UNIFONT_VERSION=11.0.01
  
  unifont.ttf:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://mirrors.kernel.org/gnu/unifont/unifont-$(UNIFONT_VERSION)/unifont-$(UNIFONT_VERSION).ttf
@@ -25,12 +21,8 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  %.sfd: %.ttf
  	$(FONTFORGE) -lang=ff -c "Open(\"$<\");Save(\"$@\");Quit(0);"
-@@ -35,31 +35,31 @@
- 	$(JULIA) charwidths.jl > $@
- 
- # Unicode data version
--UNICODE_VERSION=9.0.0
-+UNICODE_VERSION=11.0.0
+@@ -38,31 +38,31 @@
+ UNICODE_VERSION=11.0.0
  
  UnicodeData.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ -O http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
@@ -64,5 +56,9 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 -	$(CURL) $(CURLFLAGS) $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/auxiliary/GraphemeBreakTest.txt | $(PERL) -pe 's,÷,/,g;s,×,+,g' > $@
 +	$(PERL) -pe 's,÷,/,g;s,×,+,g' < /usr/share/unicode/auxiliary/GraphemeBreakTest.txt > $@
  
+ emoji-data.txt:
+-	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://unicode.org/Public/emoji/`echo $(UNICODE_VERSION) | cut -d. -f1-2`/emoji-data.txt
++	cp /usr/share/unicode/emoji/emoji-data.txt $@
+ 
  clean:
- 	rm -f UnicodeData.txt EastAsianWidth.txt GraphemeBreakProperty.txt DerivedCoreProperties.txt CompositionExclusions.txt CaseFolding.txt NormalizationTest.txt GraphemeBreakTest.txt CharWidths.txt unifont*.ttf unifont*.sfd
+ 	rm -f UnicodeData.txt EastAsianWidth.txt GraphemeBreakProperty.txt DerivedCoreProperties.txt CompositionExclusions.txt CaseFolding.txt NormalizationTest.txt GraphemeBreakTest.txt CharWidths.txt unifont*.ttf unifont*.sfd emoji-data.txt
