@@ -1,4 +1,4 @@
-utf8proc (2.2.0-1) UNRELEASED; urgency=medium
+utf8proc (2.2.0-1) unstable; urgency=medium
 
   * New upstream release
   * Drop patches no longer needed, refresh remaining
@@ -6,7 +6,7 @@ utf8proc (2.2.0-1) UNRELEASED; urgency=medium
   * Update debian/copyright
   * New patch pass-hardening-flags.patch
 
- -- Graham Inggs <ginggs@debian.org>  Fri, 27 Jul 2018 09:00:25 +0000
+ -- Graham Inggs <ginggs@debian.org>  Fri, 27 Jul 2018 10:17:12 +0000
 
 utf8proc (2.1.1-1) unstable; urgency=medium
 
