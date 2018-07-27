@@ -4,11 +4,14 @@ Source: https://github.com/JuliaStrings/utf8proc
 
 Files: *
 Copyright: 2009, 2013 Public Software Group e. V., Berlin, Germany
-           2014-2015 Steven G. Johnson, Jiahao Chen, Peter Colberg, Tony Kelman, Scott P. Jones, and other contributors: https://github.com/JuliaLang/utf8proc/contributors
+           2014-2018 Steven G. Johnson, Jiahao Chen, Tony Kelman,
+                     Jonas Fonseca, and other contributors
 License: Expat
 
 Files: data/data_generator.rb
-Copyright: 2009, 2013 Public Software Group e. V., Berlin, Germany
+Copyright: 2009 Public Software Group e. V., Berlin, Germany
+           2018 Steven G. Johnson, Tony Kelman, Keno Fischer,
+                Benito van der Zander, Michaël Meyer, and other contributors
            1991-2007 Unicode, Inc.
 License: Expat and Unicode
 
@@ -18,7 +21,7 @@ License: Unicode
 
 Files: debian/*
 Copyright: 2015-2016 Peter Colberg <peter@colberg.org>
-           2017 Graham Inggs <ginggs@debian.org>
+           2017-2018 Graham Inggs <ginggs@debian.org>
 License: Expat
 
 License: Expat
