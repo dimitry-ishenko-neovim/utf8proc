@@ -2,6 +2,7 @@ utf8proc (2.2.0-1) UNRELEASED; urgency=medium
 
   * New upstream release
   * Drop patches no longer needed, refresh remaining
+  * Update debian/libutf8proc2.symbols
 
  -- Graham Inggs <ginggs@debian.org>  Fri, 27 Jul 2018 09:00:25 +0000
 
