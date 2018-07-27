@@ -11,7 +11,7 @@ CFLAGS ?= -O2
 PICFLAG = -fPIC
 C99FLAG = -std=c99
 WCFLAGS = -Wall -pedantic
-UCFLAGS = $(CFLAGS) $(PICFLAG) $(C99FLAG) $(WCFLAGS) -DUTF8PROC_EXPORTS
+UCFLAGS = $(CFLAGS) $(PICFLAG) $(C99FLAG) $(WCFLAGS) -DUTF8PROC_EXPORTS $(UTF8PROC_DEFINES)
 
 # shared-library version MAJOR.MINOR.PATCH ... this may be *different*
 # from the utf8proc version number because it indicates ABI compatibility,
@@ -20,8 +20,8 @@ UCFLAGS = $(CFLAGS) $(PICFLAG) $(C99FLAG) $(WCFLAGS) -DUTF8PROC_EXPORTS
 # The API version number is defined in utf8proc.h.
 # Be sure to also update these ABI versions in MANIFEST and CMakeLists.txt!
 MAJOR=2
-MINOR=1
-PATCH=1
+MINOR=2
+PATCH=0
 
 OS := $(shell uname)
 ifeq ($(OS),Darwin) # MacOS X
