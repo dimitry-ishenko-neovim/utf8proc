@@ -1,3 +1,2 @@
 use-unicode-data.patch
 unicode11.patch
-skip-failing-grapheme-break-tests.patch
