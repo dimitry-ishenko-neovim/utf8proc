@@ -1,3 +1,10 @@
+utf8proc (2.3.0-1) UNRELEASED; urgency=medium
+
+  * New upstream version 2.3.0
+  * Bump unicode-data requirement to >= 12.0 && << 12.1
+
+ -- Mo Zhou <cdluminate@gmail.com>  Tue, 16 Apr 2019 08:10:04 +0000
+
 utf8proc (2.2.0-1) unstable; urgency=medium
 
   * New upstream release
