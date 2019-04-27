@@ -1,2 +1,3 @@
 use-unicode-data.patch
 unicode-data-12.1.0pre1.patch
+utf8proc-unicode-version.patch
