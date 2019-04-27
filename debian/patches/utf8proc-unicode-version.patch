@@ -38,3 +38,29 @@ Index: utf8proc/README.md
  
  For Unicode normalizations, the following options are used:
  
+Index: utf8proc/utf8proc.h
+===================================================================
+--- utf8proc.orig/utf8proc.h
++++ utf8proc/utf8proc.h
+@@ -71,7 +71,7 @@
+ /** The MAJOR version number (increased when backwards API compatibility is broken). */
+ #define UTF8PROC_VERSION_MAJOR 2
+ /** The MINOR version number (increased when new functionality is added in a backwards-compatible manner). */
+-#define UTF8PROC_VERSION_MINOR 2
++#define UTF8PROC_VERSION_MINOR 3
+ /** The PATCH version (increased for fixes that do not change the API). */
+ #define UTF8PROC_VERSION_PATCH 0
+ /** @} */
+Index: utf8proc/Makefile
+===================================================================
+--- utf8proc.orig/Makefile
++++ utf8proc/Makefile
+@@ -21,7 +21,7 @@ UCFLAGS = $(CPPFLAGS) $(CFLAGS) $(PICFLA
+ # The API version number is defined in utf8proc.h.
+ # Be sure to also update these ABI versions in MANIFEST and CMakeLists.txt!
+ MAJOR=2
+-MINOR=2
++MINOR=3
+ PATCH=0
+ 
+ OS := $(shell uname)
