@@ -1,3 +1,5 @@
+Just adapt the library to unicode-data 12.1.0-pre1
+use $ make data to update it.
 diff --git a/utf8proc_data.c b/utf8proc_data.c
 index 70891be..6a1633c 100644
 --- a/utf8proc_data.c
