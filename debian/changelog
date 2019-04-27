@@ -1,9 +1,12 @@
 utf8proc (2.3.0-1) unstable; urgency=medium
 
-  * New upstream version 2.3.0
+  * New upstream version 2.3.0 (Closes: #927941)
   * Bump unicode-data requirement to (>= 12.1) && (<< 12.2).
   * Refresh use-unicode-data.patch; Remove pass-hardening-flags.patch (merged).
   * Patch: update utf8proc_data.c against unicode-data 12.1.0~pre1.
+  * Patch: update unicode-data version strings to 12.1.0
+  * Patch: Upstream didn't bump minor version in build system and header.
+  * Install the newly-added pkgconfig file. (Closes: #927260)
   * Add a new symbol.
 
  -- Mo Zhou <cdluminate@gmail.com>  Sat, 27 Apr 2019 02:17:28 +0000
