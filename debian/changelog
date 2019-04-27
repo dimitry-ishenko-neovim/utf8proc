@@ -1,9 +1,12 @@
-utf8proc (2.3.0-1) UNRELEASED; urgency=medium
+utf8proc (2.3.0-1) unstable; urgency=medium
 
   * New upstream version 2.3.0
-  * Bump unicode-data requirement to >= 12.0 && << 12.1
+  * Bump unicode-data requirement to (>= 12.1) && (<< 12.2).
+  * Refresh use-unicode-data.patch; Remove pass-hardening-flags.patch (merged).
+  * Patch: update utf8proc_data.c against unicode-data 12.1.0~pre1.
+  * Add a new symbol.
 
- -- Mo Zhou <cdluminate@gmail.com>  Tue, 16 Apr 2019 08:10:04 +0000
+ -- Mo Zhou <cdluminate@gmail.com>  Sat, 27 Apr 2019 02:17:28 +0000
 
 utf8proc (2.2.0-1) unstable; urgency=medium
 
