@@ -6,23 +6,12 @@ Forwarded: not-needed
 Last-Update: 2018-07-27
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
---- a/data/Makefile
-+++ b/data/Makefile
-@@ -23,10 +23,10 @@
- UNIFONT_VERSION=11.0.01
- 
- unifont.ttf:
--	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://mirrors.kernel.org/gnu/unifont/unifont-$(UNIFONT_VERSION)/unifont-$(UNIFONT_VERSION).ttf
-+	cp /usr/share/fonts/truetype/unifont/unifont.ttf $@
- 
- unifont_upper.ttf:
--	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://mirrors.kernel.org/gnu/unifont/unifont-$(UNIFONT_VERSION)/unifont_upper-$(UNIFONT_VERSION).ttf
-+	cp /usr/share/fonts/truetype/unifont/unifont_upper.ttf $@
- 
- %.sfd: %.ttf
- 	$(FONTFORGE) -lang=ff -c "Open(\"$<\");Save(\"$@\");Quit(0);"
-@@ -38,31 +38,31 @@
- UNICODE_VERSION=11.0.0
+Index: utf8proc/data/Makefile
+===================================================================
+--- utf8proc.orig/data/Makefile
++++ utf8proc/data/Makefile
+@@ -25,31 +25,31 @@ CharWidths.txt: charwidths.jl EastAsianW
+ UNICODE_VERSION=12.0.0
  
  UnicodeData.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ -O http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
@@ -61,4 +50,4 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +	cp /usr/share/unicode/emoji/emoji-data.txt $@
  
  clean:
- 	rm -f UnicodeData.txt EastAsianWidth.txt GraphemeBreakProperty.txt DerivedCoreProperties.txt CompositionExclusions.txt CaseFolding.txt NormalizationTest.txt GraphemeBreakTest.txt CharWidths.txt unifont*.ttf unifont*.sfd emoji-data.txt
+ 	rm -f UnicodeData.txt EastAsianWidth.txt GraphemeBreakProperty.txt DerivedCoreProperties.txt CompositionExclusions.txt CaseFolding.txt NormalizationTest.txt GraphemeBreakTest.txt CharWidths.txt emoji-data.txt
