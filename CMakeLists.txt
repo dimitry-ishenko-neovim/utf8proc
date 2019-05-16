@@ -10,8 +10,10 @@ project (utf8proc C)
 # API version number (defined in utf8proc.h).
 # Be sure to also update these in Makefile and MANIFEST!
 set(SO_MAJOR 2)
-set(SO_MINOR 2)
-set(SO_PATCH 0)
+set(SO_MINOR 3)
+set(SO_PATCH 1)
+
+option(UTF8PROC_INSTALL "Enable installation of utf8proc" On)
 
 add_library (utf8proc
   utf8proc.c
@@ -46,12 +48,14 @@ set_target_properties (utf8proc PROPERTIES
   SOVERSION ${SO_MAJOR}
 )
 
-install(TARGETS utf8proc
-  RUNTIME DESTINATION bin
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib)
+if (UTF8PROC_INSTALL)
+  install(TARGETS utf8proc
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib)
 
-install(
-  FILES
-    "${PROJECT_SOURCE_DIR}/utf8proc.h"
-  DESTINATION include)
+  install(
+    FILES
+      "${PROJECT_SOURCE_DIR}/utf8proc.h"
+    DESTINATION include)
+endif()

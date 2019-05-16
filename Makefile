@@ -13,6 +13,8 @@ PICFLAG = -fPIC
 C99FLAG = -std=c99
 WCFLAGS = -Wall -pedantic
 UCFLAGS = $(CPPFLAGS) $(CFLAGS) $(PICFLAG) $(C99FLAG) $(WCFLAGS) -DUTF8PROC_EXPORTS $(UTF8PROC_DEFINES)
+LDFLAG_SHARED = -shared
+SOFLAG = -Wl,-soname
 
 # shared-library version MAJOR.MINOR.PATCH ... this may be *different*
 # from the utf8proc version number because it indicates ABI compatibility,
@@ -21,8 +23,8 @@ UCFLAGS = $(CPPFLAGS) $(CFLAGS) $(PICFLAG) $(C99FLAG) $(WCFLAGS) -DUTF8PROC_EXPO
 # The API version number is defined in utf8proc.h.
 # Be sure to also update these ABI versions in MANIFEST and CMakeLists.txt!
 MAJOR=2
-MINOR=2
-PATCH=0
+MINOR=3
+PATCH=1
 
 OS := $(shell uname)
 ifeq ($(OS),Darwin) # MacOS X
@@ -79,7 +81,7 @@ libutf8proc.a: utf8proc.o
 	$(AR) rs libutf8proc.a utf8proc.o
 
 libutf8proc.so.$(MAJOR).$(MINOR).$(PATCH): utf8proc.o
-	$(CC) $(LDFLAGS) -shared -o $@ -Wl,-soname -Wl,libutf8proc.so.$(MAJOR) utf8proc.o
+	$(CC) $(LDFLAGS) $(LDFLAG_SHARED) -o $@ $(SOFLAG) -Wl,libutf8proc.so.$(MAJOR) utf8proc.o
 	chmod a-x $@
 
 libutf8proc.so: libutf8proc.so.$(MAJOR).$(MINOR).$(PATCH)
