@@ -1,8 +1,14 @@
-utf8proc (2.4.0-1) UNRELEASED; urgency=medium
+utf8proc (2.4.0-1) unstable; urgency=medium
 
   * New upstream version 2.4.0
+  * Bump Standards-Version to 4.4.0 (no change).
+  * Delete d/compat in favor of debhelper-compat (= 11).
+  * Update patches:
+    * Rebase use-unicode-data.patch
+    - Remove unicode-data-12.1.0pre1.patch
+    - Remove utf8proc-unicode-version.patch
 
- -- Mo Zhou <cdluminate@gmail.com>  Wed, 21 Aug 2019 14:23:34 +0000
+ -- Mo Zhou <cdluminate@gmail.com>  Wed, 21 Aug 2019 14:41:53 +0000
 
 utf8proc (2.3.0-1) unstable; urgency=medium
 
