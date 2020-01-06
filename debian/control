@@ -4,11 +4,11 @@ Maintainer: Debian Julia Team <pkg-julia-devel@lists.alioth.debian.org>
 Uploaders: Peter Colberg <peter@colberg.org>,
            Graham Inggs <ginggs@debian.org>,
            Mo Zhou <cdluminate@gmail.com>,
-Build-Depends: debhelper-compat (= 11),
+Build-Depends: debhelper-compat (= 12),
                perl,
                unicode-data (<< 12.2),
                unicode-data (>= 12.1)
-Standards-Version: 4.4.0
+Standards-Version: 4.4.1
 Section: libs
 Homepage: https://github.com/JuliaStrings/utf8proc
 Vcs-Git: https://salsa.debian.org/julia-team/utf8proc.git
