@@ -1,0 +1,3 @@
+Test-Command: make -f debian/tests/Makefile
+Depends: @, build-essential
+Restrictions: allow-stderr
