@@ -1,3 +1,9 @@
+utf8proc (2.5.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Graham Inggs <ginggs@debian.org>  Mon, 30 Mar 2020 06:53:38 +0000
+
 utf8proc (2.4.0-2) unstable; urgency=medium
 
   [ Debian Janitor ]
