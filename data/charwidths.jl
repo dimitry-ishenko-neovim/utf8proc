@@ -52,7 +52,7 @@ const UTF8PROC_CATEGORY_CO = 29
 #############################################################################
 # Use a default width of 1 for all character categories that are
 # letter/symbol/number-like, as well as for unassigned/private-use chars.
-# This can be overriden by UAX 11
+# This can be overridden by UAX 11
 # below, but provides a useful nonzero fallback for new codepoints when
 # a new Unicode version has been released but Unifont hasn't been updated yet.
 
@@ -60,7 +60,7 @@ zerowidth = Set{Int}() # categories that may contain zero-width chars
 push!(zerowidth, UTF8PROC_CATEGORY_MN)
 push!(zerowidth, UTF8PROC_CATEGORY_MC)
 push!(zerowidth, UTF8PROC_CATEGORY_ME)
-push!(zerowidth, UTF8PROC_CATEGORY_SK)
+# push!(zerowidth, UTF8PROC_CATEGORY_SK)  # see issue #167
 push!(zerowidth, UTF8PROC_CATEGORY_ZL)
 push!(zerowidth, UTF8PROC_CATEGORY_ZP)
 push!(zerowidth, UTF8PROC_CATEGORY_CC)
