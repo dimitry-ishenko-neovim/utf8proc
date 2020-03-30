@@ -5,6 +5,7 @@ utf8proc (2.5.0-1) UNRELEASED; urgency=medium
   * Build with unicode-data 13.0 (Closes: #954131)
   * Set Rules-Requires-Root: no
   * Add Build-Depends-Package to libutf8proc2.symbols
+  * Bump Standards-Version to 4.5.0, no changes
 
  -- Graham Inggs <ginggs@debian.org>  Mon, 30 Mar 2020 06:53:38 +0000
 

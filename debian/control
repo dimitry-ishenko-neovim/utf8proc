@@ -8,7 +8,7 @@ Build-Depends: debhelper-compat (= 12),
                perl,
                unicode-data (<< 13.1),
                unicode-data (>= 13.0)
-Standards-Version: 4.4.1
+Standards-Version: 4.5.0
 Rules-Requires-Root: no
 Section: libs
 Homepage: https://github.com/JuliaStrings/utf8proc
