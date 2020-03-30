@@ -1,4 +1,4 @@
-utf8proc (2.5.0-1) UNRELEASED; urgency=medium
+utf8proc (2.5.0-1) unstable; urgency=medium
 
   * New upstream release
   * Refresh use-unicode-data.patch
@@ -7,7 +7,7 @@ utf8proc (2.5.0-1) UNRELEASED; urgency=medium
   * Add Build-Depends-Package to libutf8proc2.symbols
   * Bump Standards-Version to 4.5.0, no changes
 
- -- Graham Inggs <ginggs@debian.org>  Mon, 30 Mar 2020 06:53:38 +0000
+ -- Graham Inggs <ginggs@debian.org>  Mon, 30 Mar 2020 08:12:49 +0000
 
 utf8proc (2.4.0-2) unstable; urgency=medium
 
