@@ -3,15 +3,13 @@ Description: Use unicode-data instead of downloading external files
  provided by the packages unicode-data and ttf-unifont, respectively.
 Author: Peter Colberg <peter@colberg.org>
 Forwarded: not-needed
-Last-Update: 2018-07-27
+Last-Update: 2020-03-30
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: utf8proc/data/Makefile
-===================================================================
---- utf8proc.orig/data/Makefile
-+++ utf8proc/data/Makefile
-@@ -28,31 +28,31 @@ UNICODE_VERSION=12.1.0
- UNICODE_EMOJI_VERSION=12.0
+--- a/data/Makefile
++++ b/data/Makefile
+@@ -25,31 +25,31 @@
+ UNICODE_VERSION=13.0.0
  
  UnicodeData.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ -O http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
@@ -46,7 +44,7 @@ Index: utf8proc/data/Makefile
 +	$(PERL) -pe 's,÷,/,g;s,×,+,g' < /usr/share/unicode/auxiliary/GraphemeBreakTest.txt > $@
  
  emoji-data.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://unicode.org/Public/emoji/$(UNICODE_EMOJI_VERSION)/emoji-data.txt
+-	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://unicode.org/Public/$(UNICODE_VERSION)/ucd/emoji/emoji-data.txt
 +	cp /usr/share/unicode/emoji/emoji-data.txt $@
  
  clean:
