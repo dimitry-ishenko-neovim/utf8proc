@@ -22,7 +22,7 @@ License: Unicode
 Files: debian/*
 Copyright: 2015-2016 Peter Colberg <peter@colberg.org>
            2017-2018 Graham Inggs <ginggs@debian.org>
-	   2019-2020 Mo Zhou <lumin@debian.org>
+           2019-2020 Mo Zhou <lumin@debian.org>
 License: Expat
 
 License: Expat
