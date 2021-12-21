@@ -11,7 +11,7 @@ PERL=perl
 CFLAGS ?= -O2
 PICFLAG = -fPIC
 C99FLAG = -std=c99
-WCFLAGS = -Wall -Wextra -pedantic
+WCFLAGS = -Wsign-conversion -Wall -Wextra -pedantic
 UCFLAGS = $(CPPFLAGS) $(CFLAGS) $(PICFLAG) $(C99FLAG) $(WCFLAGS) -DUTF8PROC_EXPORTS $(UTF8PROC_DEFINES)
 LDFLAG_SHARED = -shared
 SOFLAG = -Wl,-soname
@@ -23,8 +23,8 @@ SOFLAG = -Wl,-soname
 # The API version number is defined in utf8proc.h.
 # Be sure to also update these ABI versions in MANIFEST and CMakeLists.txt!
 MAJOR=2
-MINOR=4
-PATCH=1
+MINOR=5
+PATCH=0
 
 OS := $(shell uname)
 ifeq ($(OS),Darwin) # MacOS X
