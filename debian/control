@@ -9,7 +9,7 @@ Build-Depends: debhelper-compat (= 13),
                ruby,
                unicode-data (<< 14.1),
                unicode-data (>= 14.0)
-Standards-Version: 4.5.0
+Standards-Version: 4.6.0
 Rules-Requires-Root: no
 Section: libs
 Homepage: https://github.com/JuliaStrings/utf8proc

@@ -14,6 +14,7 @@ utf8proc (2.7.0-1) UNRELEASED; urgency=medium
   * Install the pkgconfig file from libutf8proc-dev.install
     instead of debian/rules
   * Switch to debhelper 13
+  * Bump Standards-Version to 4.6.0, no changes
 
  -- Debian Janitor <janitor@jelmer.uk>  Fri, 18 Sep 2020 05:52:35 -0000
 
