@@ -8,6 +8,7 @@ utf8proc (2.7.0-1) UNRELEASED; urgency=medium
   * New upstream release
   * Refresh use-unicode-data.patch
   * Build with unicode-data 14.0 (Closes: #995579)
+  * Add build-dependency on ruby
 
  -- Debian Janitor <janitor@jelmer.uk>  Fri, 18 Sep 2020 05:52:35 -0000
 
