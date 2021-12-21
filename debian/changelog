@@ -1,4 +1,4 @@
-utf8proc (2.7.0-1) UNRELEASED; urgency=medium
+utf8proc (2.7.0-1) unstable; urgency=medium
 
   [ Debian Janitor ]
   * debian/copyright: use spaces rather than tabs to start continuation lines.
@@ -16,7 +16,7 @@ utf8proc (2.7.0-1) UNRELEASED; urgency=medium
   * Switch to debhelper 13
   * Bump Standards-Version to 4.6.0, no changes
 
- -- Debian Janitor <janitor@jelmer.uk>  Fri, 18 Sep 2020 05:52:35 -0000
+ -- Graham Inggs <ginggs@debian.org>  Tue, 21 Dec 2021 14:29:13 +0000
 
 utf8proc (2.5.0-1) unstable; urgency=medium
 
