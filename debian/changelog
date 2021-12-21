@@ -13,6 +13,7 @@ utf8proc (2.7.0-1) UNRELEASED; urgency=medium
   * Update libutf8proc2.symbols with new symbols from 2.6.0
   * Install the pkgconfig file from libutf8proc-dev.install
     instead of debian/rules
+  * Switch to debhelper 13
 
  -- Debian Janitor <janitor@jelmer.uk>  Fri, 18 Sep 2020 05:52:35 -0000
 
