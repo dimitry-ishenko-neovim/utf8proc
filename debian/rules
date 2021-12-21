@@ -6,7 +6,6 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 override_dh_auto_install:
 	dh_auto_install -- prefix=/usr libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
-	install -Dm0644 libutf8proc.pc debian/libutf8proc-dev/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/libutf8proc.pc
 
 override_dh_installchangelogs:
 	dh_installchangelogs NEWS.md
