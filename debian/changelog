@@ -10,6 +10,7 @@ utf8proc (2.7.0-1) UNRELEASED; urgency=medium
   * Build with unicode-data 14.0 (Closes: #995579)
   * Add build-dependency on ruby
   * Skip graphemetest that never completes
+  * Update libutf8proc2.symbols with new symbols from 2.6.0
 
  -- Debian Janitor <janitor@jelmer.uk>  Fri, 18 Sep 2020 05:52:35 -0000
 
