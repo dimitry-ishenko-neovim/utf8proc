@@ -3,49 +3,49 @@ Description: Use unicode-data instead of downloading external files
  provided by the packages unicode-data and ttf-unifont, respectively.
 Author: Peter Colberg <peter@colberg.org>
 Forwarded: not-needed
-Last-Update: 2020-03-30
+Last-Update: 2021-12-21
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/data/Makefile
 +++ b/data/Makefile
 @@ -25,31 +25,31 @@
- UNICODE_VERSION=13.0.0
+ UNICODE_VERSION=14.0.0
  
  UnicodeData.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
+-	$(CURL) $(CURLFLAGS) -o $@ https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
 +	cp /usr/share/unicode/UnicodeData.txt $@
  
  EastAsianWidth.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/EastAsianWidth.txt
+-	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/EastAsianWidth.txt
 +	cp /usr/share/unicode/extracted/DerivedEastAsianWidth.txt $@
  
  GraphemeBreakProperty.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/auxiliary/GraphemeBreakProperty.txt
+-	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/auxiliary/GraphemeBreakProperty.txt
 +	cp /usr/share/unicode/auxiliary/GraphemeBreakProperty.txt $@
  
  DerivedCoreProperties.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/DerivedCoreProperties.txt
+-	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/DerivedCoreProperties.txt
 +	cp /usr/share/unicode/DerivedCoreProperties.txt $@
  
  CompositionExclusions.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/CompositionExclusions.txt
+-	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/CompositionExclusions.txt
 +	cp /usr/share/unicode/CompositionExclusions.txt $@
  
  CaseFolding.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/CaseFolding.txt
+-	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/CaseFolding.txt
 +	cp /usr/share/unicode/CaseFolding.txt $@
  
  NormalizationTest.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/NormalizationTest.txt
+-	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/NormalizationTest.txt
 +	bzip2 -d < /usr/share/unicode/NormalizationTest.txt.bz2 > $@
  
  GraphemeBreakTest.txt:
--	$(CURL) $(CURLFLAGS) $(URLCACHE)http://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/auxiliary/GraphemeBreakTest.txt | $(PERL) -pe 's,÷,/,g;s,×,+,g' > $@
+-	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/auxiliary/GraphemeBreakTest.txt
 +	$(PERL) -pe 's,÷,/,g;s,×,+,g' < /usr/share/unicode/auxiliary/GraphemeBreakTest.txt > $@
  
  emoji-data.txt:
--	$(CURL) $(CURLFLAGS) -o $@ -O $(URLCACHE)http://unicode.org/Public/$(UNICODE_VERSION)/ucd/emoji/emoji-data.txt
+-	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://unicode.org/Public/$(UNICODE_VERSION)/ucd/emoji/emoji-data.txt
 +	cp /usr/share/unicode/emoji/emoji-data.txt $@
  
- clean:
- 	rm -f UnicodeData.txt EastAsianWidth.txt GraphemeBreakProperty.txt DerivedCoreProperties.txt CompositionExclusions.txt CaseFolding.txt NormalizationTest.txt GraphemeBreakTest.txt CharWidths.txt emoji-data.txt
+ Uppercase.txt: DerivedCoreProperties.txt
+ 	$(RUBY) -e 'puts File.read("DerivedCoreProperties.txt")[/# Derived Property: Uppercase.*?# Total code points:/m]' > $@
