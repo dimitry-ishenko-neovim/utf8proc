@@ -6,8 +6,8 @@ Uploaders: Peter Colberg <peter@colberg.org>,
            Mo Zhou <lumin@debian.org>
 Build-Depends: debhelper-compat (= 12),
                perl,
-               unicode-data (<< 13.1),
-               unicode-data (>= 13.0)
+               unicode-data (<< 14.1),
+               unicode-data (>= 14.0)
 Standards-Version: 4.5.0
 Rules-Requires-Root: no
 Section: libs
