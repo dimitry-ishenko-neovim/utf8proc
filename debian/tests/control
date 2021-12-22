@@ -1,3 +1,7 @@
 Test-Command: make -f debian/tests/Makefile
 Depends: @, build-essential
-Restrictions: allow-stderr
+Restrictions: allow-stderr, build-needed
+
+Test-Command: /bin/true
+Depends: unicode-data
+Restrictions: hint-testsuite-triggers
