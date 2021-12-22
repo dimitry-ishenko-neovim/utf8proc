@@ -2,6 +2,7 @@ utf8proc (2.7.0-2) UNRELEASED; urgency=medium
 
   * Use GraphemeBreakTest.txt as is, re-enable graphemetest
   * Use grep to generate Uppercase.txt and Lowercase.txt
+  * Drop build-dependencies on perl and ruby
 
  -- Graham Inggs <ginggs@debian.org>  Wed, 22 Dec 2021 16:12:17 +0000
 

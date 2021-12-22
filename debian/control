@@ -5,8 +5,6 @@ Uploaders: Peter Colberg <peter@colberg.org>,
            Graham Inggs <ginggs@debian.org>,
            Mo Zhou <lumin@debian.org>
 Build-Depends: debhelper-compat (= 13),
-               perl,
-               ruby,
                unicode-data (<< 14.1),
                unicode-data (>= 14.0)
 Standards-Version: 4.6.0
