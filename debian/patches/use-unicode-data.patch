@@ -8,7 +8,7 @@ Last-Update: 2021-12-22
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/data/Makefile
 +++ b/data/Makefile
-@@ -25,31 +25,31 @@
+@@ -25,37 +25,37 @@
  UNICODE_VERSION=14.0.0
  
  UnicodeData.txt:
@@ -48,4 +48,12 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +	cp /usr/share/unicode/emoji/emoji-data.txt $@
  
  Uppercase.txt: DerivedCoreProperties.txt
- 	$(RUBY) -e 'puts File.read("DerivedCoreProperties.txt")[/# Derived Property: Uppercase.*?# Total code points:/m]' > $@
+-	$(RUBY) -e 'puts File.read("DerivedCoreProperties.txt")[/# Derived Property: Uppercase.*?# Total code points:/m]' > $@
++	grep -zoP '(?s)# Derived Property: Uppercase.*?# Total code points:' DerivedCoreProperties.txt > $@
+ 
+ Lowercase.txt: DerivedCoreProperties.txt
+-	$(RUBY) -e 'puts File.read("DerivedCoreProperties.txt")[/# Derived Property: Lowercase.*?# Total code points:/m]' > $@
++	grep -zoP '(?s)# Derived Property: Lowercase.*?# Total code points:' DerivedCoreProperties.txt > $@
+ 
+ clean:
+ 	rm -f UnicodeData.txt EastAsianWidth.txt GraphemeBreakProperty.txt DerivedCoreProperties.txt CompositionExclusions.txt CaseFolding.txt NormalizationTest.txt GraphemeBreakTest.txt CharWidths.txt emoji-data.txt
