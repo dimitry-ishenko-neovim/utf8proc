@@ -1,11 +1,11 @@
-utf8proc (2.7.0-2) UNRELEASED; urgency=medium
+utf8proc (2.7.0-2) unstable; urgency=medium
 
   * Use GraphemeBreakTest.txt as is, re-enable graphemetest
   * Use grep to generate Uppercase.txt and Lowercase.txt
   * Drop build-dependencies on perl and ruby
   * Adapt autopkgtest so it is triggered by changes to unicode-data
 
- -- Graham Inggs <ginggs@debian.org>  Wed, 22 Dec 2021 16:12:17 +0000
+ -- Graham Inggs <ginggs@debian.org>  Fri, 24 Dec 2021 06:47:34 +0000
 
 utf8proc (2.7.0-1) unstable; urgency=medium
 
