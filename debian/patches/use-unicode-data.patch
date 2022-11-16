@@ -6,10 +6,12 @@ Forwarded: not-needed
 Last-Update: 2021-12-22
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
---- a/data/Makefile
-+++ b/data/Makefile
-@@ -25,37 +25,37 @@
- UNICODE_VERSION=14.0.0
+Index: utf8proc/data/Makefile
+===================================================================
+--- utf8proc.orig/data/Makefile
++++ utf8proc/data/Makefile
+@@ -25,37 +25,37 @@ CharWidths.txt: charwidths.jl EastAsianW
+ UNICODE_VERSION=15.0.0
  
  UnicodeData.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
