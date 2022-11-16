@@ -1,3 +1,10 @@
+utf8proc (2.8.0-1) UNRELEASED; urgency=medium
+
+  * New upstream version 2.8.0
+  * Remove patches for unicode-data 15. No longer needed.
+
+ -- Mo Zhou <lumin@debian.org>  Wed, 16 Nov 2022 14:02:28 -0500
+
 utf8proc (2.7.0-4) unstable; urgency=medium
 
   * Bump B-D to Unicode-data 15.0
