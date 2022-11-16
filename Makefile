@@ -23,7 +23,7 @@ SOFLAG = -Wl,-soname
 # The API version number is defined in utf8proc.h.
 # Be sure to also update these ABI versions in MANIFEST and CMakeLists.txt!
 MAJOR=2
-MINOR=5
+MINOR=6
 PATCH=0
 
 OS := $(shell uname)
@@ -78,7 +78,7 @@ utf8proc.o: utf8proc.h utf8proc.c utf8proc_data.c
 
 libutf8proc.a: utf8proc.o
 	rm -f libutf8proc.a
-	$(AR) rs libutf8proc.a utf8proc.o
+	$(AR) crs libutf8proc.a utf8proc.o
 
 libutf8proc.so.$(MAJOR).$(MINOR).$(PATCH): utf8proc.o
 	$(CC) $(LDFLAGS) $(LDFLAG_SHARED) -o $@ $(SOFLAG) -Wl,libutf8proc.so.$(MAJOR) utf8proc.o
