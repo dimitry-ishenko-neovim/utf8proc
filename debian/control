@@ -14,7 +14,7 @@ Homepage: https://github.com/JuliaStrings/utf8proc
 Vcs-Git: https://salsa.debian.org/julia-team/utf8proc.git
 Vcs-Browser: https://salsa.debian.org/julia-team/utf8proc
 
-Package: libutf8proc2
+Package: libutf8proc3
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
@@ -30,7 +30,7 @@ Package: libutf8proc-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libutf8proc2 (= ${binary:Version}), ${misc:Depends}
+Depends: libutf8proc3 (= ${binary:Version}), ${misc:Depends}
 Description: C library for processing UTF-8 Unicode data (development files)
  utf8proc is a small, clean C library that provides Unicode normalization,
  case-folding, and other operations for data in the UTF-8 encoding, supporting
