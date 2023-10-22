@@ -11,7 +11,7 @@ Index: utf8proc/data/Makefile
 --- utf8proc.orig/data/Makefile
 +++ utf8proc/data/Makefile
 @@ -25,37 +25,37 @@ CharWidths.txt: charwidths.jl EastAsianW
- UNICODE_VERSION=15.0.0
+ UNICODE_VERSION=15.1.0
  
  UnicodeData.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
