@@ -1,9 +1,12 @@
-utf8proc (2.9.0-1) UNRELEASED; urgency=medium
+utf8proc (2.9.0-1~exp1) experimental; urgency=medium
 
   * New upstream version 2.9.0 (Closes: #1052835)
     supports unicode-data 15.1.0
+  * Refresh remaining patches.
+  * Bump SOVERSION from 2 to 3.
+  * Discard the --no-parallel dh option.
 
- -- Mo Zhou <lumin@debian.org>  Sun, 22 Oct 2023 17:07:07 -0400
+ -- Mo Zhou <lumin@debian.org>  Sun, 22 Oct 2023 17:18:12 -0400
 
 utf8proc (2.8.0-1) unstable; urgency=medium
 
