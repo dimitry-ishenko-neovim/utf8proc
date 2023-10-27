@@ -1,3 +1,9 @@
+utf8proc (2.9.0-1) unstable; urgency=medium
+
+  * Upload to unstable and start transition.
+
+ -- Mo Zhou <lumin@debian.org>  Fri, 27 Oct 2023 14:45:19 -0400
+
 utf8proc (2.9.0-1~exp1) experimental; urgency=medium
 
   * New upstream version 2.9.0 (Closes: #1052835)
