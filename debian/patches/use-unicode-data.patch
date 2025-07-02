@@ -10,52 +10,52 @@ Index: utf8proc/data/Makefile
 ===================================================================
 --- utf8proc.orig/data/Makefile
 +++ utf8proc/data/Makefile
-@@ -25,37 +25,37 @@ CharWidths.txt: charwidths.jl EastAsianW
- UNICODE_VERSION=15.1.0
+@@ -24,37 +24,37 @@ utf8proc_data.c.new: data_generator.jl $
+ UNICODE_VERSION=16.0.0
  
  UnicodeData.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/UnicodeData.txt
-+	cp /usr/share/unicode/UnicodeData.txt $@
++	cp ../debian/unicode/UnicodeData.txt $@
  
  EastAsianWidth.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/EastAsianWidth.txt
-+	cp /usr/share/unicode/extracted/DerivedEastAsianWidth.txt $@
++	cp ../debian/unicode/DerivedEastAsianWidth.txt $@
  
  GraphemeBreakProperty.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/auxiliary/GraphemeBreakProperty.txt
-+	cp /usr/share/unicode/auxiliary/GraphemeBreakProperty.txt $@
++	cp ../debian/unicode/GraphemeBreakProperty.txt $@
  
  DerivedCoreProperties.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/DerivedCoreProperties.txt
-+	cp /usr/share/unicode/DerivedCoreProperties.txt $@
++	cp ../debian/unicode/DerivedCoreProperties.txt $@
  
  CompositionExclusions.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/CompositionExclusions.txt
-+	cp /usr/share/unicode/CompositionExclusions.txt $@
++	cp ../debian/unicode/CompositionExclusions.txt $@
  
  CaseFolding.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/CaseFolding.txt
-+	cp /usr/share/unicode/CaseFolding.txt $@
++	cp ../debian/unicode/CaseFolding.txt $@
  
  NormalizationTest.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/NormalizationTest.txt
-+	bzip2 -d < /usr/share/unicode/NormalizationTest.txt.bz2 > $@
++	cp ../debian/unicode/NormalizationTest.txt $@
  
  GraphemeBreakTest.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://www.unicode.org/Public/$(UNICODE_VERSION)/ucd/auxiliary/GraphemeBreakTest.txt
-+	cp /usr/share/unicode/auxiliary/GraphemeBreakTest.txt $@
++	cp ../debian/unicode/GraphemeBreakTest.txt $@
  
  emoji-data.txt:
 -	$(CURL) $(CURLFLAGS) -o $@ $(URLCACHE)https://unicode.org/Public/$(UNICODE_VERSION)/ucd/emoji/emoji-data.txt
-+	cp /usr/share/unicode/emoji/emoji-data.txt $@
++	cp ../debian/unicode/emoji-data.txt $@
  
  Uppercase.txt: DerivedCoreProperties.txt
--	$(RUBY) -e 'puts File.read("DerivedCoreProperties.txt")[/# Derived Property: Uppercase.*?# Total code points:/m]' > $@
+-	$(JULIA) -e 'print(match(r"# Derived Property: Uppercase.*?# Total code points:"s, read("DerivedCoreProperties.txt", String)).match)' > $@
 +	grep -zoP '(?s)# Derived Property: Uppercase.*?# Total code points:' DerivedCoreProperties.txt > $@
  
  Lowercase.txt: DerivedCoreProperties.txt
--	$(RUBY) -e 'puts File.read("DerivedCoreProperties.txt")[/# Derived Property: Lowercase.*?# Total code points:/m]' > $@
+-	$(JULIA) -e 'print(match(r"# Derived Property: Lowercase.*?# Total code points:"s, read("DerivedCoreProperties.txt", String)).match)' > $@
 +	grep -zoP '(?s)# Derived Property: Lowercase.*?# Total code points:' DerivedCoreProperties.txt > $@
  
  clean:
- 	rm -f UnicodeData.txt EastAsianWidth.txt GraphemeBreakProperty.txt DerivedCoreProperties.txt CompositionExclusions.txt CaseFolding.txt NormalizationTest.txt GraphemeBreakTest.txt CharWidths.txt emoji-data.txt
+ 	rm -f $(RAWDATA) NormalizationTest.txt GraphemeBreakTest.txt
