@@ -1,3 +1,10 @@
+utf8proc (2.10.0-2) unstable; urgency=medium
+
+  * d/copyright: update and simplify
+  * debian: clean up
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 03 Jul 2025 00:51:50 -0400
+
 utf8proc (2.10.0-1) unstable; urgency=medium
 
   * Add new exported symbols
